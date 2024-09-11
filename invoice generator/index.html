@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invoice Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Invoice Generator</h1>
+  <form id="invoiceForm">
+    <label>AWB No: <input type="text" id="awbNo" required></label>
+    <label>Consignee: <input type="text" id="consignee" required></label>
+    <label>Destination: <input type="text" id="destination" required></label>
+    <label>Net: <input type="number" id="net" required></label>
+    <label>Network No: <input type="text" id="networkNo" required></label>
+    <label>D/S: <input type="text" id="ds" required></label>
+    <label>Pcs: <input type="number" id="pcs" required></label>
+    <label>Weight: <input type="number" id="weight" required></label>
+    <label>Amount: <input type="number" id="amount" required></label>
+    <label>COVID Charge: <input type="number" id="covidCharge" required></label>
+    <label>Fuel Charge: <input type="number" id="fuelCharge" required></label>
+    
+    <label>Date: <input type="text" id="date" readonly></label>
+    
+    <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+  </form>
+
+  <div id="output">
+    <h2>Invoice Summary</h2>
+    <p id="summary"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
